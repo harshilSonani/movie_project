@@ -1,0 +1,27 @@
+<%- include('userHeader') %>
+
+
+    <section class="upcoming">
+        <div class="container">
+            <div class="flex-wrapper" style="display: flex !important; align-items: center !important; justify-content: start;">
+
+                <div class="title-wrapper">
+                    <% for(var d of theaterID){ %>
+                    <p class="section-subtitle"><%= d.date %></p>
+                    <% } %>
+                </div>
+
+                <ul class="filter-list" style="padding-left: 450px; display: block;">
+                    <% for(var d of theaterID){ %>
+                    <li>
+                        <% for(var ddd of d.time){ %>
+                        <a href="/bookTickets/<%= d.id %>?time=<%= ddd %>" class="filter-btn"><%= ddd %></a>
+                        <% } %>
+                    </li>
+                    <% } %>
+                    
+                </ul>
+
+            </div>
+        </div>
+    </section>

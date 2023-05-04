@@ -1,0 +1,88 @@
+<%- include('header') %>
+
+<main id="main" class="main">
+
+  <div class="pagetitle">
+    <h1>Movie Form</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item">Movie</li>
+        <li class="breadcrumb-item active">Add Movie</li>
+      </ol>
+    </nav>
+  </div><!-- End Page Title -->
+  <section class="section">
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Vertical Form</h5>
+
+            <!-- Vertical Form -->
+            <form class="row g-3" method="post" action="/admin/insertMovie" enctype="multipart/form-data">
+              <div class="col-6">
+                <label for="inputNanme4" class="form-label">Movie Name</label>
+                <input type="text" class="form-control" id="inputNanme4" name="name">
+              </div>
+              <div class="col-6">
+                <label for="inputEmail4" class="form-label">Movie Run Time</label>
+                <input type="text" class="form-control" id="inputEmail4" name="movieTime">
+              </div>
+              <div class="col-6">
+                <label for="inputPassword4" class="form-label">Movie language</label>
+                <input type="text" class="form-control" id="inputPassword4" name="language">
+              </div>
+              <div class="col-6">
+                <label for="inputAddress" class="form-label">Movie Types</label><br>
+
+                  <input type="checkbox" name="movieType" value="action" id="inputAddress">action&nbsp;
+                  <input type="checkbox" name="movieType" value="adventure" id="inputAddress">adventure&nbsp;
+                  <input type="checkbox" name="movieType" value="comedy" id="inputAddress">comedy&nbsp;
+                  <input type="checkbox" name="movieType" value="drama" id="inputAddress">drama&nbsp;
+                  <input type="checkbox" name="movieType" value="fantasy" id="inputAddress">fantasy&nbsp;
+
+              </div>
+              <div class="col-6">
+                <label for="inputEmail4" class="form-label">About Movie</label><br>
+                <textarea name="about" for="inputPassword4" class="form-label" id="" cols="30" rows="5" style="width: 525px;"></textarea>
+              </div>
+              <div class="col-6">
+                <label for="inputEmail4" class="form-label">Screen Type</label><br>
+                <input type="checkbox" value="movieType" name="ScreenType" id="inputAddress">2D&nbsp;
+                <input type="checkbox" value="ICE 3D" name="ScreenType" id="inputAddress">ICE 3D&nbsp;
+                <input type="checkbox" value="IMAX 3D" name="ScreenType" id="inputAddress">IMAX 3D&nbsp;
+                <input type="checkbox" value="4DX 3D" name="ScreenType" id="inputAddress">4DX 3D&nbsp;
+                <input type="checkbox" value="3D" name="ScreenType" id="inputAddress">3D&nbsp;
+              </div>
+              <div class="col-6">
+                <label for="inputEmail4" class="form-label">Release Date</label>
+                <input type="date" class="form-control" id="inputEmail4" name="movieDate">
+              </div>
+              <div class="col-6">
+                <label for="inputEmail4" class="form-label">Movie banner</label>
+                <input type="file" class="form-control" id="inputEmail4" name="movieBanner">
+              </div>
+                <div class="col-6">
+                  <label for="inputEmail4" class="form-label">Movie poster</label>
+                  <input type="file" class="form-control" id="inputEmail4" name="moviePoster">
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+            </form><!-- Vertical Form -->
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+</main><!-- End #main -->
+
+  <%- include('footer') %>

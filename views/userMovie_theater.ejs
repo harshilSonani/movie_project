@@ -1,0 +1,71 @@
+<%- include('userHeader') %>
+
+    <section class="upcoming">
+        <div class="container">
+            <div class="card" style="width: 100%; background: #313639;">
+              <div class="flex-wrapper">
+
+                <div class="title-wrapper">
+    
+                  <h2 class="h2 section-title">abc</h2>
+                </div>
+    
+                <ul class="filter-list">
+    
+                    <li>
+                      <button class="filter-btn">abcd</button>
+                    </li>
+    
+                </ul>
+    
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+      <div class="container">
+
+        <div class="flex-wrapper">
+
+          <div class="title-wrapper">
+
+            <h2 class="h2 section-title">Thater Name</h2>
+          </div>
+
+        </div>
+
+        <ul class="movies-list  has-scrollbar">
+
+          <% for(var d of data){ %>
+            <li>
+              <div class="movie-card">
+  
+                <a href="/bookShow/<%= d.id %>">
+                  <figure class="card-banner">
+                    <img src="<%= d.img %>" alt="The Northman movie poster">
+                  </figure>
+                </a>
+  
+                <div class="title-wrapper">
+                  <a href="/bookShow/<%= d.id %>">
+                    <h3 class="card-title"><%= d.theater %></h3>
+                  </a>
+  
+                  <time datetime="2022"><%= d.city %></time>
+                </div>
+  
+              </div>
+            </li>
+          <% } %>
+
+
+        </ul>
+
+      </div>
+
+
+    
+
+    <% include('userFooter') %>

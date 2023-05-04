@@ -1,0 +1,80 @@
+<%- include('managerHeader') %>
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Data Tables</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Tables</li>
+          <li class="breadcrumb-item active">Data</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Datatables</h5>
+
+
+              <!-- Table with stripped rows -->
+              <table class="table">
+                <div class="datatable-top">
+                  <div class="datatable-search">
+                      <form>
+                      <input class="datatable-input" placeholder="Search..." type="search" name="search"
+                        title="Search within table">
+                    </form>
+                    </div>
+
+                </div>
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Movie</th>
+                    <th scope="col">Movie Release</th>
+                    <th scope="col">status</th>
+                    <th scope="col">action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% var i=1; for(var m of movie){ %>
+                      <tr>
+                        <th scope="col"><%= i++ %></th>
+                        <th scope="col"><a href="/manager/addShow/<%= m.id %>"><%= m.name %></a></th>
+                        <th scope="col"><%= m.movieDate %></th>
+                        <th scope="col"><a href="#">Deselect</a></th>
+                        <th scope="col"><a href="#">delete</a>||<a href="#">update</a></th>
+                      </tr>
+                    <% } %>
+                </tbody>
+              </table>
+             <div style="text-align: center;">
+              
+              
+             </div>
+              <!-- End Table with stripped rows -->
+
+
+
+
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+
+  <%- include('footer') %>
